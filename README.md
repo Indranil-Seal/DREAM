@@ -1,4 +1,6 @@
 ## DREAM - Data Science, Research, and Engineering Artifacts for Machine Learning
+![Welcome to DREAM Library]([https://example.com/path-to-image.png](https://github.com/Indranil-Seal/DREAM/blob/master/images/header.jpg))
+
 DREAM is a comprehensive library designed to support Data Science, Machine Learning, and Artificial Intelligence research. This repository centralizes essential materials, algorithms, and tools, providing a single source for critical resources used in modern data science and AI workflows.
 
 ## Overview
