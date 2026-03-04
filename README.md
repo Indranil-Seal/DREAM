@@ -3,132 +3,129 @@
 
 DREAM is a comprehensive library designed to support Data Science, Machine Learning, and Artificial Intelligence research. This repository centralizes essential materials, algorithms, and tools, providing a single source for critical resources used in modern data science and AI workflows.
 
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Recent Updates](#recent-updates)
+- [Library Index](#library-index)
+  - [Books & Textbooks](#books--textbooks)
+  - [Research Papers](#research-papers)
+  - [Tools & Reference](#tools--reference)
+- [Repository Stats](#repository-stats)
+- [Author & Practitioner](#author--practitioner)
+
+---
+
 ## Overview
-DREAM simplifies the process of conducting research and development in data science by aggregating resources commonly needed for machine learning and AI applications.
 
-# Extract File Names and Sizes
-This R function scans a folder and its subfolders to identify all Word, PDF, 
-and PowerPoint files. It calculates their sizes and the total size they occupy. 
-Refer DREAMS/file_hunter.R
+DREAM simplifies the process of conducting research and development in data science by aggregating resources commonly needed for machine learning and AI applications. The library spans foundational theory, cutting-edge research, practical tools, and reference materials to support the full spectrum of data science and AI work.
 
-## Function Definition
+---
 
-```r
-#' Extract File Names and Sizes for Word, PDF, and PowerPoint Files
-#'
-#' This function scans a given folder and its subfolders to identify all Word, 
-#' PDF, and PowerPoint files. It returns their names, sizes in kilobytes, and 
-#' the total space they occupy.
-#'
-#' @param folder_path Character. The path to the folder to scan.
-#'
-#' @return A list containing:
-#' \describe{
-#'   \item{files_info}{A data frame with two columns: `file_name` and `size_kb`.}
-#'   \item{total_size_kb}{Numeric. The total size of all files in kilobytes (KB).}
-#' }
-#' 
-#' @examples
-#' \dontrun{
-#' # Example usage:
-#' result <- get_files_and_sizes("path/to/your/folder")
-#' print(result$files_info)
-#' cat("Total Size (KB):", result$total_size_kb, "\n")
-#' }
-#' 
-#' @export
-get_files_and_sizes <- function(folder_path) {
-  # Supported file extensions
-  file_extensions <- c(".doc", ".docx", ".pdf", ".ppt", ".pptx")
-  
-  if (!dir.exists(folder_path)) {
-    stop("Invalid folder path.")
-  }
-  
-  # Initialize storage for results
-  files_info <- data.frame(file_name = character(), size_kb = numeric(), stringsAsFactors = FALSE)
-  total_size_kb <- 0
-  
-  # Recursively list all files in the directory
-  all_files <- list.files(folder_path, recursive = TRUE, full.names = TRUE)
-  
-  # Filter files by extension and compute sizes
-  for (file_path in all_files) {
-    if (any(tolower(tools::file_ext(file_path)) %in% gsub("\\.", "", file_extensions))) {
-      file_size_kb <- file.info(file_path)$size / 1024  # Convert size to KB
-      files_info <- rbind(files_info, data.frame(file_name = basename(file_path), size_kb = file_size_kb))
-      total_size_kb <- total_size_kb + file_size_kb
-    }
-  }
-  
-  return(list(files_info = files_info, total_size_kb = total_size_kb))
-}
+## Recent Updates
 
-# Example demonstration
-main <- function() {
-  folder_path <- readline(prompt = "Enter the folder path: ")
-  
-  # Try to get file information
-  tryCatch({
-    result <- get_files_and_sizes(folder_path)
-    
-    if (nrow(result$files_info) == 0) {
-      cat("No Word, PDF, or PowerPoint files found in the folder.\n")
-    } else {
-      cat(sprintf("%-50s %10s\n", "File Name", "Size (KB)"))
-      cat(strrep("-", 60), "\n")
-      apply(result$files_info, 1, function(row) {
-        cat(sprintf("%-50s %10.2f\n", row["file_name"], as.numeric(row["size_kb"])))
-      })
-      cat(strrep("-", 60), "\n")
-      cat(sprintf("%-50s %10.2f\n", "Total Size (KB)", result$total_size_kb))
-    }
-  }, error = function(e) {
-    cat("Error:", e$message, "\n")
-  })
-}
+The following resources were recently added to the DREAM library:
 
-# Call main function
-main()
+| Document | Category | Date Added |
+|----------|----------|------------|
+| Build a Large Language Model | Book | Mar 2026 |
 
-# You can also use a python version of the above code
-This Python script scans a given folder and identifies all Word, PDF, and PowerPoint files. It calculates their individual sizes and provides the total size occupied by these files in the folder.
-Refer DREAMS/file_hunter.py
+---
 
-## Script
+## Library Index
 
-```python
-import os
+The library contains **50 resources** spanning books, research papers, and tools.
 
-def get_files_and_sizes(folder_path):
-    # List of file extensions to look for
-    file_extensions = ['.doc', '.docx', '.pdf', '.ppt', '.pptx']
-    total_size = 0
-    
-    print(f"{'File Name':<50} {'Size (KB)':>10}")
-    print("-" * 60)
-    
-    # Traverse the folder
-    for root, _, files in os.walk(folder_path):
-        for file in files:
-            # Check if file has one of the desired extensions
-            if any(file.lower().endswith(ext) for ext in file_extensions):
-                file_path = os.path.join(root, file)
-                file_size = os.path.getsize(file_path) / 1024  # Convert size to KB
-                total_size += file_size
-                print(f"{file:<50} {file_size:>10.2f}")
-    
-    print("-" * 60)
-    print(f"{'Total Size (KB)':<50} {total_size:>10.2f}")
+---
 
-# Provide the folder path
-folder_path = input("Enter the folder path: ").strip()
-if os.path.isdir(folder_path):
-    get_files_and_sizes(folder_path)
-else:
-    print("Invalid folder path.")
+### Books & Textbooks
 
+| # | Title | Author(s) |
+|---|-------|-----------|
+| 1 | Hands-On Machine Learning with Scikit-Learn and TensorFlow | Aurélien Géron |
+| 2 | The Elements of Statistical Learning | — |
+| 3 | Introduction to Statistical Learning | — |
+| 4 | Introduction to Statistical Learning using Python | — |
+| 5 | Machine Learning Notes | Andrew Ng, Tengyu Ma |
+| 6 | Machine Learning Techniques for Smart Manufacturing | — |
+| 7 | Neural Networks: A Visual Introduction for Beginners | Michael Taylor |
+| 8 | Transformers | — |
+| 9 | Build a Large Language Model | — |
+| 10 | BloombergGPT: LLM for Finance | — |
+| 11 | Introduction to Linear Regression Analysis | Douglas C. Montgomery, Elizabeth A. Peck, G. Geoffrey Vining |
+| 12 | Beginning Statistics | — |
+| 13 | Fundamentals of Statistics Volume 2 | — |
+| 14 | Engineering Optimization: Theory and Practice | Singiresu S. Rao |
+| 15 | Operations Research (8th Ed.) | Hamdy A. Taha |
+| 16 | Automated Data Collection with R | Simon Munzert |
+| 17 | An Introduction to Data Cleaning with R | Edwin de Jonge, Mark van der Loo |
+| 18 | Hands-On Exploratory Data Analysis with Python | — |
+| 19 | Python 3 Object-Oriented Programming | — |
+| 20 | Python Basics | S. Linner, M. Lischewski, M. Richerzhagen |
+| 21 | Data Structures and Algorithms Made Easy | Narasimha Karumanchi |
+| 22 | Data Structures and Algorithms Made Easy (copy) | Narasimha Karumanchi |
+| 23 | Fundamental Analysis For Dummies | Matt Krantz |
+| 24 | Predictive Modeling Notes | — |
 
+---
 
-## Author & Practitioner 
+### Research Papers
+
+| # | Title | Author(s) |
+|---|-------|-----------|
+| 25 | Bankruptcy Prediction for Credit Risk using Neural Networks | — |
+| 26 | Credit Card Fraud Detection using Bayesian and Neural Networks | — |
+| 27 | Gene Selection for Cancer Classification using Support Vector Machines | — |
+| 28 | Support-Vector Networks | Corinna Cortes, Vladimir Vapnik |
+| 29 | Elastic Net | Hui Zou, Trevor Hastie |
+| 30 | On the Degrees of Freedom of the LASSO | Hui Zou, Trevor Hastie, Robert Tibshirani |
+| 31 | The Dantzig Selector: Statistical Estimation when p >> n | Bradley Efron, Trevor Hastie, Robert Tibshirani |
+| 32 | Least Angle Regression | Trevor Hastie, Robert Tibshirani |
+| 33 | Random Survival Forests | Hemant Ishwaran, Udaya B. Kogalur, Eugene H. Blackstone, Michael S. Lauer |
+| 34 | Explaining the Success of AdaBoost and Random Forests as Interpolating Classifiers | — |
+| 35 | Population Theory on Ensemble Boosting | — |
+| 36 | K-Means++ | — |
+| 37 | Genetic Algorithm Based Clustering | — |
+| 38 | Non-Parametric Model Identification using Genetic Algorithm | — |
+| 39 | Global Optimization by Basin-Hopping | — |
+| 40 | Isolation Forest | — |
+| 41 | clustMixType: k-Prototypes Clustering for Mixed Variable-Type Data | — |
+
+---
+
+### Tools & Reference
+
+| # | Title | Author(s) |
+|---|-------|-----------|
+| 42 | Pandas Cheat Sheet | — |
+| 43 | Python Cheat Sheet | — |
+| 44 | StringR Cheat Sheet | — |
+| 45 | Data Transformation Cheat Sheet (DPLYR) | — |
+| 46 | Shiny Cheat Sheet | — |
+| 47 | partykit: A Toolkit for Recursive Partitioning | Achim Zeileis, Torsten Hothorn |
+| 48 | clValid: Cluster Validation | — |
+| 49 | R Functions for Regression Analysis | — |
+| 50 | RTM Further Information | — |
+
+---
+
+## Repository Stats
+
+[![GitHub forks](https://img.shields.io/github/forks/Indranil-Seal/DREAM?style=social)](https://github.com/Indranil-Seal/DREAM/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/Indranil-Seal/DREAM?style=social)](https://github.com/Indranil-Seal/DREAM/stargazers)
+
+| Metric | Count |
+|--------|-------|
+| Forks | 3 |
+| Stars | 0 |
+| Total Library Resources | 50 |
+
+> Clone traffic statistics require authenticated GitHub API access and are not displayed here.
+
+---
+
+## Author & Practitioner
+
 Indranil Seal

@@ -1,0 +1,11 @@
+DREAM
+-This is a library for Data Science, Research, and Engineering Artifacts for Machine Learning
+
+Tasks(04-03-2026)
+- Track the latest file additions and deletions inside the folder DREAM/library
+- remove file_hunder.py and file_hunter.R
+- Update the README file to remove the section "Function Definition" and replace it with all the file names that are there in the folder "DREAM/library"
+- While entering the file names make sure you process the names properly and remove any special characters in the name. Access each document and get the title of the document and their authors and put them in the README section as instructed
+- Re-design the README file to look more appealing but do not change the image/content of the header.
+- Also add number of clones/forks of this library in the README file
+- From the folder "DREAM/library" remove any files that contains "Grok" in there file name
