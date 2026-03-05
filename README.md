@@ -30,7 +30,7 @@ The following resources were recently added to the DREAM library:
 
 | Document | Category | Date Added |
 |----------|----------|------------|
-| RAG-NLP Task | Reference | Mar 2026 |
+| RAG-NLP *(renamed from RAG-NLP Task)* | Reference | Mar 2026 |
 | Build a Large Language Model | Book | Mar 2026 |
 
 ---
@@ -108,7 +108,7 @@ The library contains **50 resources** spanning books, research papers, and tools
 | 47 | clValid: Cluster Validation | — |
 | 48 | R Functions for Regression Analysis | — |
 | 49 | RTM Further Information | — |
-| 50 | RAG-NLP Task | — |
+| 50 | RAG-NLP | — |
 
 ---
 
