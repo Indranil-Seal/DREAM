@@ -30,6 +30,7 @@ The following resources were recently added to the DREAM library:
 
 | Document | Category | Date Added |
 |----------|----------|------------|
+| RAG-NLP Task | Reference | Mar 2026 |
 | Build a Large Language Model | Book | Mar 2026 |
 
 ---
@@ -65,9 +66,8 @@ The library contains **50 resources** spanning books, research papers, and tools
 | 19 | Python 3 Object-Oriented Programming | — |
 | 20 | Python Basics | S. Linner, M. Lischewski, M. Richerzhagen |
 | 21 | Data Structures and Algorithms Made Easy | Narasimha Karumanchi |
-| 22 | Data Structures and Algorithms Made Easy (copy) | Narasimha Karumanchi |
-| 23 | Fundamental Analysis For Dummies | Matt Krantz |
-| 24 | Predictive Modeling Notes | — |
+| 22 | Fundamental Analysis For Dummies | Matt Krantz |
+| 23 | Predictive Modeling Notes | — |
 
 ---
 
@@ -75,23 +75,23 @@ The library contains **50 resources** spanning books, research papers, and tools
 
 | # | Title | Author(s) |
 |---|-------|-----------|
-| 25 | Bankruptcy Prediction for Credit Risk using Neural Networks | — |
-| 26 | Credit Card Fraud Detection using Bayesian and Neural Networks | — |
-| 27 | Gene Selection for Cancer Classification using Support Vector Machines | — |
-| 28 | Support-Vector Networks | Corinna Cortes, Vladimir Vapnik |
-| 29 | Elastic Net | Hui Zou, Trevor Hastie |
-| 30 | On the Degrees of Freedom of the LASSO | Hui Zou, Trevor Hastie, Robert Tibshirani |
-| 31 | The Dantzig Selector: Statistical Estimation when p >> n | Bradley Efron, Trevor Hastie, Robert Tibshirani |
-| 32 | Least Angle Regression | Trevor Hastie, Robert Tibshirani |
-| 33 | Random Survival Forests | Hemant Ishwaran, Udaya B. Kogalur, Eugene H. Blackstone, Michael S. Lauer |
-| 34 | Explaining the Success of AdaBoost and Random Forests as Interpolating Classifiers | — |
-| 35 | Population Theory on Ensemble Boosting | — |
-| 36 | K-Means++ | — |
-| 37 | Genetic Algorithm Based Clustering | — |
-| 38 | Non-Parametric Model Identification using Genetic Algorithm | — |
-| 39 | Global Optimization by Basin-Hopping | — |
-| 40 | Isolation Forest | — |
-| 41 | clustMixType: k-Prototypes Clustering for Mixed Variable-Type Data | — |
+| 24 | Bankruptcy Prediction for Credit Risk using Neural Networks | — |
+| 25 | Credit Card Fraud Detection using Bayesian and Neural Networks | — |
+| 26 | Gene Selection for Cancer Classification using Support Vector Machines | — |
+| 27 | Support-Vector Networks | Corinna Cortes, Vladimir Vapnik |
+| 28 | Elastic Net | Hui Zou, Trevor Hastie |
+| 29 | On the Degrees of Freedom of the LASSO | Hui Zou, Trevor Hastie, Robert Tibshirani |
+| 30 | The Dantzig Selector: Statistical Estimation when p >> n | Bradley Efron, Trevor Hastie, Robert Tibshirani |
+| 31 | Least Angle Regression | Trevor Hastie, Robert Tibshirani |
+| 32 | Random Survival Forests | Hemant Ishwaran, Udaya B. Kogalur, Eugene H. Blackstone, Michael S. Lauer |
+| 33 | Explaining the Success of AdaBoost and Random Forests as Interpolating Classifiers | — |
+| 34 | Population Theory on Ensemble Boosting | — |
+| 35 | K-Means++ | — |
+| 36 | Genetic Algorithm Based Clustering | — |
+| 37 | Non-Parametric Model Identification using Genetic Algorithm | — |
+| 38 | Global Optimization by Basin-Hopping | — |
+| 39 | Isolation Forest | — |
+| 40 | clustMixType: k-Prototypes Clustering for Mixed Variable-Type Data | — |
 
 ---
 
@@ -99,15 +99,16 @@ The library contains **50 resources** spanning books, research papers, and tools
 
 | # | Title | Author(s) |
 |---|-------|-----------|
-| 42 | Pandas Cheat Sheet | — |
-| 43 | Python Cheat Sheet | — |
-| 44 | StringR Cheat Sheet | — |
-| 45 | Data Transformation Cheat Sheet (DPLYR) | — |
-| 46 | Shiny Cheat Sheet | — |
-| 47 | partykit: A Toolkit for Recursive Partitioning | Achim Zeileis, Torsten Hothorn |
-| 48 | clValid: Cluster Validation | — |
-| 49 | R Functions for Regression Analysis | — |
-| 50 | RTM Further Information | — |
+| 41 | Pandas Cheat Sheet | — |
+| 42 | Python Cheat Sheet | — |
+| 43 | StringR Cheat Sheet | — |
+| 44 | Data Transformation Cheat Sheet (DPLYR) | — |
+| 45 | Shiny Cheat Sheet | — |
+| 46 | partykit: A Toolkit for Recursive Partitioning | Achim Zeileis, Torsten Hothorn |
+| 47 | clValid: Cluster Validation | — |
+| 48 | R Functions for Regression Analysis | — |
+| 49 | RTM Further Information | — |
+| 50 | RAG-NLP Task | — |
 
 ---
 
